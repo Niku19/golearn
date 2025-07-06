@@ -34,6 +34,20 @@ func main() {
 
 	// Append file
 	appendit()
+
+	// Copy slices
+	sl := []int{1, 2, 3}
+	t := make([]int, len(sl), (cap(sl)+1)*2)
+	copy(t, sl)
+	sl = t
+	printSlices(sl)
+
+	// To append one slice to another, use ... to expand the second argument to a list of arguments.
+	first := []string{"John", "Paul"}
+	second := []string{"George", "Ringo", "Pete"}
+	first = append(first, second...) // equivalent to "append(a, b[0], b[1], b[2])"
+	// a == []string{"John", "Paul", "George", "Ringo", "Pete"}
+	fmt.Printf("First is : %v", first)
 }
 
 func printSlice(s string, x []int) {
