@@ -5,7 +5,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/Niku19/golearn/bignumbers"
+	"github.com/Niku19/golearn/Tour/bignumbers"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 	bignumbers.Biggy()
 	math.Sqrt(5)
 	var p *int
-	i:=0
+	i := 0
 	p = &i
 	fmt.Print(p)
 }
